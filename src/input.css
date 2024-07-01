@@ -1,0 +1,152 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    html {
+        scroll-behavior: smooth;
+    }
+}
+.body-set {
+    width: 100vw;
+}
+
+/* Base font size */
+html {
+    font-size: 16px;
+}
+
+/* Responsive font sizes */
+body {
+    font-size: 1rem; 
+}
+
+h1 {
+    font-size: 2.5rem; 
+}
+
+h2 {
+    font-size: 2rem; 
+}
+
+h3 {
+    font-size: 1.75rem; 
+}
+
+h4 {
+    font-size: 1.5rem;
+}
+
+h5 {
+    font-size: 1.25rem;
+}
+
+h6 {
+    font-size: 1rem;
+}
+
+p, a, li, td, th {
+    font-size: 1rem;
+}
+
+.padz {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.gradientz {
+    background-image: linear-gradient(90deg, rgba(20, 56, 211, 0.7), rgba(16, 32, 159, 0.7));
+    text-align: center;
+    backdrop-filter: blur(0.35rem);
+}
+
+.gradientzz {
+    background-image: linear-gradient(90deg, rgb(20, 56, 211), rgb(16, 32, 159));
+    text-align: center;
+}
+
+/* Media queries for responsiveness */
+
+/* Small devices (landscape phones, 640px and up) */
+@media (max-width: 640px) {
+    html {
+        font-size: 14px;
+    }
+    .padz {
+        padding-left: 0.5rem; 
+        padding-right: 0.5rem;
+      }
+      
+      p {
+        line-height: normal;
+      }
+}
+
+/* Medium devices (tablets, 768px and down) */
+@media (min-width: 641px) and (max-width: 768px) {
+    html {
+        font-size: 15px; 
+    }
+    
+    p {
+        line-height: normal;
+    }
+
+    img {
+        max-height: 550px;
+    }
+
+    .padz {
+        padding-left: 1.5rem;
+        padding-right: 1.5rem;
+      }
+}
+
+/* Large devices (desktops, 1024px and down) */
+@media (min-width: 769px) and (max-width: 1024px) {
+    html {
+        font-size: 16px;
+    }
+    
+    h1 {
+        font-size: 3.5rem;
+    }
+
+    .padz {
+        padding-left: 5%; 
+        padding-right: 5%;
+      }
+}
+
+/* Extra large devices (large desktops, 1280px and down) */
+@media (min-width: 1025px) and (max-width: 1280px) {
+    html {
+        font-size: 18px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .padz {
+        padding-left: 10%;
+        padding-right: 10%;
+      }
+}
+
+/* Ultra large devices (larger desktops, 1281px and up) */
+@media (min-width: 1281px) {
+    html {
+        font-size: 20px;
+    }
+
+    h1 {
+        font-size: 4rem;
+    }
+
+    .padz {
+        padding-left: 15%;
+        padding-right: 15%;
+    }
+}
+
