@@ -49,6 +49,14 @@ p, a, li, td, th {
     font-size: 1rem;
 }
 
+.bxshadowlight {
+    custom-light: 0 2px 4px rgba(0, 0, 0, 0.1);
+}
+
+.bxshadowdark {
+    custom-dark: 0 4px 8px rgba(0, 0, 0, 0.4);
+}
+
 .padz {
     padding-left: 1rem;
     padding-right: 1rem;
