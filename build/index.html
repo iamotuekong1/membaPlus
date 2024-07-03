@@ -12,7 +12,7 @@
 
     <script defer src="https://cdn.jsdelivr.net/npm/alpinejs@3.14.1/dist/cdn.min.js"></script>
 </head>
-<body class="body-set" 
+<body class="body-set bg-fixed bg-center" style="background-image: url('../assets/images/MembaPlusBodyOverlay.png'); background-size: 100% 100%;"
 x-data="{navbarOpen: false, scrolledFromTop: false}"
 x-init="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = false" 
 @scroll.window="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = false"
@@ -44,16 +44,16 @@ x-init="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = fa
 
                 :class="{'translate-x-full': !navbarOpen, 'translate-x-0, gradientz': navbarOpen}">
                     <li>
-                        <a href="#">Home</a>
+                        <a href="#home">Home</a>
                     </li>
                     <li>
-                        <a href="#">Features</a>
+                        <a href="#features">Features</a>
                     </li>
                     <li>
-                       <a href="#">Pricing</a> 
+                       <a href="#pricing">Pricing</a> 
                     </li>
                     <li>
-                        <a href="#">Contact</a>
+                        <a href="#contact">Contact</a>
                     </li>
                 </ul>
                   
@@ -62,7 +62,7 @@ x-init="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = fa
             
 
         <!-- banner -->
-        <div class="w-full padz overflow-hidden bg-cover bg-center pt-[5rem] md:pt-[5rem] bg-fixed flex flex-col md:flex-row justify-center items-center text-center md:text-left text-white" style="background-image: linear-gradient(90deg, rgba(20, 56, 211, 0.9), rgba(16, 32, 159, 0.9)), url('../assets/images/backdrop.jpg');">
+        <div id="home" class="w-full padz overflow-hidden bg-cover bg-center pt-[5rem] md:pt-[5rem] bg-fixed flex flex-col md:flex-row justify-center items-center text-center md:text-left text-white" style="background-image: linear-gradient(90deg, rgba(20, 56, 211, 0.9), rgba(16, 32, 159, 0.9)), url('../assets/images/backdrop.jpg');">
             <div class="AA flex-1">
                 <P class="tracking-[0.5rem] -mb-3 text-sm">WELCOME TO</P>
                 <h1 class="font-extrabold mb-5">MEMBA<Span class="font-thin ">Plus</Span></h1>
@@ -83,9 +83,11 @@ x-init="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = fa
         </div>
 
         <!-- flooting container -->
-        <div class="flex flex-col md:flex-row min-h-[5rem] bg-blue-50 mx-[10%] xl:mx-[15%] relative -top-[15rem] md:-top-10 rounded-md shadow-md overflow-hidden z-10">
-            <div class="w-full md:w-[25%] h-40 md:h-auto md:bg-center bg-cover"
-            style="background-image: url('../assets/images/float.jpg');"></div>
+        <div class="flex flex-col md:flex-row min-h-[5rem] bg-blue-50 mx-[10%] xl:mx-[15%] relative -top-[15rem] md:-top-10 rounded-md shadow-md overflow-hidden z-10 "
+        
+        style="background-image: url('../assets/images/MembaPlusBodyOverlay.png'); background-size: 100% 100%;">
+            <div class="w-full md:w-[25%] h-40 md:h-auto md:bg-right-bottom bg-cover"
+            style="background-image: url('../assets/images/MembaPlusFloat.jpg');"></div>
             <div class="flex-1 py-5 px-10 text-center md:text-left">
                 <div>
                     <h4 class="font-semibold text-[1.2rem] pb-2">Get Your Organization  Online</h4>
@@ -97,19 +99,16 @@ x-init="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = fa
             </div>            
         </div>
 
-        <div class="platforms -mt-[14rem] md:-mt-[2rem] mb-[0.8rem]">
-            <img class="mx-auto max-h-[5rem]" src="../assets/images/MembaPlusApps.png" alt="">
-        </div>
-
         <!-- main section -->
-        <div class="main w-full">
+        <div class="main w-full -mt-[14rem] md:-mt-[2rem] mb-[0.8rem]">
 
-            <!-- plans -->
-            <div class="features-section padz py-[0.8rem] flex flex-col md:flex-row items-center bg-blue-50">
+            <!-- features -->
+            <div id="features" class="features padz py-[0.8rem] flex flex-col md:flex-row items-center mb-4 bg-cover bg-center shadow-md"
+            style="background-image: url('../assets/images/MembaPlusFeaturesOverlay.png');">
                 
                 <div class="mockup w-1/3 mx-auto text-center md:text-left">
-                    <h4 class="pb-[0.2rem] mb-1 text-blue-500">App <span class="font-bold">Features</span></h4>
-                    <div class="pb-[0.2rem] mb-3 border-b-2 border-b-blue-300 w-[60%] mx-auto md:mx-0"></span></div>
+                    <h4 class="pb-[0.2rem] mb-1 text-cyan-500 font-bold text-[2rem]">App <span class="font-bold">Features!</span></h4>
+                    
                     <div class="min-h-0 md:min-h-[16rem] bg-cover bg-center" style="background-image: url('../assets/images/MembaPlusFeatures.png');"></div>
                 </div>
 
@@ -156,6 +155,190 @@ x-init="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = fa
                 </div>
             </div>
 
+            <!-- more features -->
+             <div class="more-features px-[5%] py-10 md:padz flex flex-col md:flex-row gap-5 text-center md:text-start">
+                <div class="md:hidden rightflex  flex justify-center min-h-[15rem] p-2 bg-cover">
+                    
+                    <div class="text-left flex-1 flex flex-col justify-center px-[5%]">
+                        <h3 class="mb-3 font-bold text-3xl text-indigo-600">All in One <br> SaaS Platform!</h3>
+                        <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-3 rounded-md w-[80%]">View Plans</button>
+                    </div>
+                    <img class="flex-1 w-[50%] b-4 rounded-md" src="../assets/images/MembaPlusDashboard.jpg" alt="">
+                    
+                </div>
+                
+                <div class="leftflex flex-1 flex flex-col justify-center p-[1.5rem] rounded-lg bg-cover shadow-md hover:shadow-violet-200 hover:border-violet-200 hover:border"
+                style="background-image: url(../assets/images/MembaPlusBodyOverlay.png);">
+                    <p class="text-lg mb-5"><span class="font-bold text-indigo-600">Join the MembaPlus community</span> and take your organization’s mobile presence to the next level. Sign up for a free trial and discover how our platform can help you connect, engage, and grow.</p>
+                    <ul class="">
+                        <li class=""><span class="font-bold text-indigo-600">Easy Management:</span> Sermons | Announcements</li>
+                        <hr>
+                        <li><span class="font-bold text-indigo-600">Manage Donations:</span> Across all Continents</li>
+                        <hr>
+                        <li><span class="font-bold text-indigo-600">Event Calendar:</span> Organize | Promote</li>
+                        <hr>
+                        <li><span class="font-bold text-indigo-600">Member Directory:</span> Index | Collate</li>
+                        <hr>
+                        <li><span class="font-bold text-indigo-600">Bulk SMS:</span> Messaging at Ease</li>
+                        <hr>
+                        <li><span class="font-bold text-indigo-600">Analytics Dashboard:</span> Monitor & Project</li>
+                        <hr>
+                    </ul>
+                </div>
+
+                <div class="hidden md:block rightflex flex-1 flex flex-col justify-center min-h-[15rem] p-2 bg-cover text-indigo-600">
+                    <h3 class="mb-3 font-bold text-[2rem]">All in One <br> SaaS Platform!</h3>
+                    <img class="mb-4 rounded-md" src="../assets/images/MembaPlusDashboard.jpg" alt="">
+                    <button class="bg-indigo-600 hover:bg-indigo-700 text-white font-semibold py-2 px-3 rounded-md w-[50%]">View Plans</button>
+                </div>
+             </div>
+
+             <!-- pricing -->
+
+            <div id="pricing" class="pricing w-full overflow-hidden bg-cover bg-center py-5 bg-fixed flex flex-col md:flex-row justify-center items-center text-center md:text-left text-white"
+            style="background-image: linear-gradient(90deg, rgba(20, 56, 211, 0.9), rgba(16, 32, 159, 0.9)), url('../assets/images/backdrop.jpg');">
+
+            <div class="pt-5 " id="pricing">
+                <div class="mx-auto pb-20 mt-4 max-w-7xl px-6 lg:px-8">
+                  <div class="mx-auto max-w-4xl text-center">
+                    <h1 class="text-base font-semibold leading-7 text-indigo-200">Pricing</h1>
+                    <p class="mt-2 text-4xl font-bold tracking-tight text-white sm:text-5xl">Whether it's just you, or your entire
+                      team - we've got you covered.</p>
+                  </div>
+                  <p class="mx-auto mt-6 max-w-2xl text-center text-lg leading-8 text-gray-300">Choose the product that works best</p>
+                  <div class="isolate mx-auto mt-10 grid max-w-md grid-cols-1 gap-8 lg:mx-0 lg:max-w-none lg:grid-cols-3">
+                    
+                    <!-- First Product -->
+                    <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10">
+                      <div class="flex items-center justify-between gap-x-4">
+                        <h2 id="product1" class="text-lg font-semibold leading-8 text-white">Basic Plan</h2>
+                      </div>
+                      <p class="mt-4 text-sm leading-6 text-gray-300">Product details</p>
+                      <p class="mt-6 flex items-baseline gap-x-1">
+                        <span class="text-4xl font-bold tracking-tight text-white">$ 10 / Month</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
+                      </p>
+                      <a href="/order" aria-describedby="product1"
+                        class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Order
+                        Now</a>
+                      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>40 units</li>
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>1 feature</li>
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>Fast delivery</li>
+                      </ul>
+                    </div>
+              
+                    <!-- Second Product -->
+                    <div class="bg-white/5 ring-2 ring-indigo-500 rounded-3xl p-8 xl:p-10">
+                      <div class="flex items-baseline justify-between gap-x-4">
+                        <h2 id="product2" class="text-lg font-semibold leading-8 text-white">Pro Plan</h2>
+                        <p class="rounded-full bg-indigo-500 px-2.5 py-1 text-xs font-semibold leading-5 text-white">Most popular</p>
+                      </div>
+                      <p class="mt-4 text-sm leading-6 text-gray-300">The most popular choice. <br>Product details</p>
+                      <p class="mt-6 flex items-baseline gap-x-1">
+                        <span class="text-4xl font-bold tracking-tight text-white">$ 20 / unit</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
+                      </p>
+                      <a href="/order" aria-describedby="product2"
+                        class="bg-indigo-500 text-white shadow-sm hover:bg-indigo-400 focus-visible:outline-indigo-500 mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Order
+                        Now</a>
+                      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>120 units</li>
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>3 different features</li>
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>Fast delivery</li>
+                      </ul>
+                    </div>
+              
+                    <!-- Third Product -->
+                    <div class="ring-1 ring-white/10 rounded-3xl p-8 xl:p-10">
+                      <div class="flex items-center justify-between gap-x-4">
+                        <h2 id="product3" class="text-lg font-semibold leading-8 text-white">Premium Plan</h2>
+                      </div>
+                      <p class="mt-4 text-sm leading-6 text-gray-300">Product details</p>
+                      <p class="mt-6 flex items-baseline gap-x-1">
+                        <span class="text-4xl font-bold tracking-tight text-white">$ 50 / month</span><span class="text-sm font-semibold leading-6 text-gray-300"></span>
+                      </p>
+                      <a href="/order" aria-describedby="product3"
+                        class="bg-white/10 text-white hover:bg-white/20 focus-visible:outline-white mt-6 block rounded-md py-2 px-3 text-center text-sm font-semibold leading-6 focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-2">Order
+                        Now</a>
+                      <ul role="list" class="mt-8 space-y-3 text-sm leading-6 text-gray-300 xl:mt-10">
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>240 units</li>
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>6 different features</li>
+                        <li class="flex gap-x-3"><svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 20 20" fill="currentColor"
+                            aria-hidden="true" class="h-6 w-5 flex-none text-white">
+                            <path fill-rule="evenodd"
+                              d="M16.704 4.153a.75.75 0 01.143 1.052l-8 10.5a.75.75 0 01-1.127.075l-4.5-4.5a.75.75 0 011.06-1.06l3.894 3.893 7.48-9.817a.75.75 0 011.05-.143z"
+                              clip-rule="evenodd"></path>
+                          </svg>Fast delivery</li>
+                      </ul>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            
+            </div>
+
+            <!-- download app -->
+            <div class="w-full p-4 text-center bg-white border border-gray-200 rounded-lg shadow sm:p-8">
+                <h5 class="mb-2 text-3xl font-bold text-gray-900">Work fast from anywhere</h5>
+                <p class="mb-5 text-base text-gray-500 sm:text-lg">MEMBAPlus available 24/7 on iOS & Android. Download the app today.</p>
+                <div class="items-center justify-center space-y-4 sm:flex sm:space-y-0 sm:space-x-4 rtl:space-x-reverse">
+                    <a href="#" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 ">
+                        <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="apple" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 384 512"><path fill="currentColor" d="M318.7 268.7c-.2-36.7 16.4-64.4 50-84.8-18.8-26.9-47.2-41.7-84.7-44.6-35.5-2.8-74.3 20.7-88.5 20.7-15 0-49.4-19.7-76.4-19.7C63.3 141.2 4 184.8 4 273.5q0 39.3 14.4 81.2c12.8 36.7 59 126.7 107.2 125.2 25.2-.6 43-17.9 75.8-17.9 31.8 0 48.3 17.9 76.4 17.9 48.6-.7 90.4-82.5 102.6-119.3-65.2-30.7-61.7-90-61.7-91.9zm-56.6-164.2c27.3-32.4 24.8-61.9 24-72.5-24.1 1.4-52 16.4-67.9 34.9-17.5 19.8-27.8 44.3-25.6 71.9 26.1 2 49.9-11.4 69.5-34.3z"></path></svg>
+                        <div class="text-left rtl:text-right">
+                            <div class="mb-1 text-xs">Download on the</div>
+                            <div class="-mt-1 font-sans text-sm font-semibold">Mac App Store</div>
+                        </div>
+                    </a>
+                    <a href="#" class="w-full sm:w-auto bg-gray-800 hover:bg-gray-700 focus:ring-4 focus:outline-none focus:ring-gray-300 text-white rounded-lg inline-flex items-center justify-center px-4 py-2.5 ">
+                        <svg class="me-3 w-7 h-7" aria-hidden="true" focusable="false" data-prefix="fab" data-icon="google-play" role="img" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512"><path fill="currentColor" d="M325.3 234.3L104.6 13l280.8 161.2-60.1 60.1zM47 0C34 6.8 25.3 19.2 25.3 35.3v441.3c0 16.1 8.7 28.5 21.7 35.3l256.6-256L47 0zm425.2 225.6l-58.9-34.1-65.7 64.5 65.7 64.5 60.1-34.1c18-14.3 18-46.5-1.2-60.8zM104.6 499l280.8-161.2-60.1-60.1L104.6 499z"></path></svg>
+                        <div class="text-left rtl:text-right">
+                            <div class="mb-1 text-xs">Get in on</div>
+                            <div class="-mt-1 font-sans text-sm font-semibold">Google Play</div>
+                        </div>
+                    </a>
+                </div>
+            </div>
+
+
             <!-- organizations and team -->
             <div class="organization">
                 <div class="subscribers"></div>
@@ -165,6 +348,55 @@ x-init="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = fa
             
         </div>
 
+        <!-- contact -->
+
+        <div id="contact" class="min-h-screen py-6 flex flex-col justify-center sm:py-12">
+            <div class="relative py-3 sm:max-w-xl sm:mx-auto">
+                <div
+                    class="absolute inset-0 bg-gradient-to-r from-indigo-700 to-purple-500 shadow-lg transform -skew-y-6 sm:skew-y-0 sm:-rotate-6 sm:rounded-3xl">
+                </div>
+                <div class="text-white relative px-4 py-10 bg-indigo-400 shadow-lg sm:rounded-3xl sm:p-20">
+        
+                    <div class="text-center pb-6">
+                        <h1 class="text-3xl font-bold">Contact Us!</h1>
+        
+                        <p class="text-gray-300">
+                            Fill up the form below to send us a message.
+                        </p>
+                    </div>
+        
+                    <form>
+        
+                        <input
+                                class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text" placeholder="Name" name="name">
+        
+                        <input
+                                class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="email" placeholder="Email" name="email">
+        
+                        <input
+                                class="shadow mb-4 appearance-none border rounded w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text" placeholder="Subject" name="_subject">
+        
+                        <textarea
+                                class="shadow mb-4 min-h-0 appearance-none border rounded h-64 w-full py-2 px-3 text-gray-700 leading-tight focus:outline-none focus:shadow-outline"
+                                type="text" placeholder="Type your message here..." name="message" style="height: 121px;"></textarea>
+        
+                        <div class="flex justify-between">
+                            <input
+                                class="shadow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="submit" value="Send ➤">
+                            <input
+                                class="shadow bg-indigo-600 hover:bg-indigo-700 text-white font-bold py-2 px-4 rounded focus:outline-none focus:shadow-outline"
+                                type="reset">
+                        </div>
+        
+                    </form>
+                </div>
+            </div>
+        </div>
+
         <!-- footer section -->
         <div class="footer">
 
@@ -172,7 +404,65 @@ x-init="window.pageYOffset > 60 ? scrolledFromTop =  true : scrolledFromTop = fa
             <div class="bottom-nav"></div>
 
             <!-- footer -->
-            <footer></footer>
+            <footer>
+                <footer class="w-full ">
+                    <div class="mx-auto max-w-7xl px-4 sm:px-6 lg:px-8">
+                      
+                      <!--Grid-->
+                      <div class="py-10 flex justify-between items-center flex-col gap-8 xl:flex-row">
+                        <div class="flex items-center flex-col xl:flex-row ">
+                          <a href="#" class="flex justify-center mb-8 xl:mb-0">
+                            <img class="h-[2rem]" src="../assets/images/MembaPlusNav.png" alt="">
+                          </a>
+                          <ul class="text-lg  flex items-center flex-col md:flex-row  py-8 gap-6 md:gap-12 xl:border-l border-gray-200 xl:ml-11 xl:pl-11 transition-all duration-500">
+                            <li>
+                              <a href="#" class="text-gray-800 hover:text-indigo-600">Home</a>
+                            </li>
+                            <li>
+                              <a href="#" class="text-gray-800 hover:text-indigo-600">Features</a>
+                            </li>
+                            <li>
+                              <a href="#" class="text-gray-800 hover:text-indigo-600">Pricing</a>
+                            </li>
+                            <li>
+                              <a href="#" class="text-gray-800 hover:text-indigo-600">Contact</a>
+                            </li>
+                          </ul>
+                        </div>
+                        <div class="flex  space-x-4 sm:justify-center  ">
+                          <a href="#" class="group w-9 h-9 rounded-full border border-gray-300 flex justify-center items-center transition-all duration-500 hover:border-indigo-600">
+                            <svg class="text-gray-700 transition-all duration-500  group-hover:text-indigo-600" xmlns="http://www.w3.org/2000/svg" width="20" height="20" viewBox="0 0 20 20" fill="none">
+                              <g id="Social Media">
+                                <path id="Vector" d="M11.3214 8.93654L16.4919 3.05554H15.2667L10.7772 8.16193L7.1914 3.05554H3.05566L8.47803 10.7773L3.05566 16.9444H4.28097L9.022 11.5519L12.8088 16.9444H16.9446L11.3211 8.93654H11.3214ZM9.64322 10.8453L9.09382 10.0764L4.72246 3.95809H6.60445L10.1322 8.89578L10.6816 9.66469L15.2672 16.0829H13.3852L9.64322 10.8456V10.8453Z" fill="currentColor" />
+                              </g>
+                            </svg>
+                          </a>
+                          <a href="#" class="group w-9 h-9 rounded-full border border-gray-300 flex justify-center items-center transition-all duration-500  hover:border-indigo-600">
+                            <svg class="w-[1.25rem] h-[1.125rem] text-gray-700 transition-all duration-500  group-hover:text-indigo-600" viewBox="0 0 15 15" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M4.70975 7.93663C4.70975 6.65824 5.76102 5.62163 7.0582 5.62163C8.35537 5.62163 9.40721 6.65824 9.40721 7.93663C9.40721 9.21502 8.35537 10.2516 7.0582 10.2516C5.76102 10.2516 4.70975 9.21502 4.70975 7.93663ZM3.43991 7.93663C3.43991 9.90608 5.05982 11.5025 7.0582 11.5025C9.05658 11.5025 10.6765 9.90608 10.6765 7.93663C10.6765 5.96719 9.05658 4.37074 7.0582 4.37074C5.05982 4.37074 3.43991 5.96719 3.43991 7.93663ZM9.97414 4.22935C9.97408 4.39417 10.0236 4.55531 10.1165 4.69239C10.2093 4.82946 10.3413 4.93633 10.4958 4.99946C10.6503 5.06259 10.8203 5.07916 10.9844 5.04707C11.1484 5.01498 11.2991 4.93568 11.4174 4.81918C11.5357 4.70268 11.6163 4.55423 11.649 4.39259C11.6817 4.23095 11.665 4.06339 11.6011 3.91109C11.5371 3.7588 11.4288 3.6286 11.2898 3.53698C11.1508 3.44536 10.9873 3.39642 10.8201 3.39635H10.8197C10.5955 3.39646 10.3806 3.48424 10.222 3.64043C10.0635 3.79661 9.97434 4.00843 9.97414 4.22935ZM4.21142 13.5892C3.52442 13.5584 3.15101 13.4456 2.90286 13.3504C2.57387 13.2241 2.33914 13.0738 2.09235 12.8309C1.84555 12.588 1.69278 12.3569 1.56527 12.0327C1.46854 11.7882 1.3541 11.4201 1.32287 10.7431C1.28871 10.0111 1.28189 9.79119 1.28189 7.93669C1.28189 6.08219 1.28927 5.86291 1.32287 5.1303C1.35416 4.45324 1.46944 4.08585 1.56527 3.84069C1.69335 3.51647 1.84589 3.28513 2.09235 3.04191C2.3388 2.79869 2.57331 2.64813 2.90286 2.52247C3.1509 2.42713 3.52442 2.31435 4.21142 2.28358C4.95417 2.24991 5.17729 2.24319 7.0582 2.24319C8.9391 2.24319 9.16244 2.25047 9.90582 2.28358C10.5928 2.31441 10.9656 2.42802 11.2144 2.52247C11.5434 2.64813 11.7781 2.79902 12.0249 3.04191C12.2717 3.2848 12.4239 3.51647 12.552 3.84069C12.6487 4.08513 12.7631 4.45324 12.7944 5.1303C12.8285 5.86291 12.8354 6.08219 12.8354 7.93669C12.8354 9.79119 12.8285 10.0105 12.7944 10.7431C12.7631 11.4201 12.6481 11.7881 12.552 12.0327C12.4239 12.3569 12.2714 12.5882 12.0249 12.8309C11.7784 13.0736 11.5434 13.2241 11.2144 13.3504C10.9663 13.4457 10.5928 13.5585 9.90582 13.5892C9.16306 13.6229 8.93994 13.6296 7.0582 13.6296C5.17645 13.6296 4.95395 13.6229 4.21142 13.5892ZM4.15307 1.03424C3.40294 1.06791 2.89035 1.18513 2.4427 1.3568C1.9791 1.53408 1.58663 1.77191 1.19446 2.1578C0.802277 2.54369 0.56157 2.93108 0.381687 3.38797C0.207498 3.82941 0.0885535 4.3343 0.0543922 5.07358C0.0196672 5.81402 0.0117188 6.05074 0.0117188 7.93663C0.0117188 9.82252 0.0196672 10.0592 0.0543922 10.7997C0.0885535 11.539 0.207498 12.0439 0.381687 12.4853C0.56157 12.9419 0.802334 13.3297 1.19446 13.7155C1.58658 14.1012 1.9791 14.3387 2.4427 14.5165C2.89119 14.6881 3.40294 14.8054 4.15307 14.839C4.90479 14.8727 5.1446 14.8811 7.0582 14.8811C8.9718 14.8811 9.212 14.8732 9.96332 14.839C10.7135 14.8054 11.2258 14.6881 11.6737 14.5165C12.137 14.3387 12.5298 14.1014 12.9219 13.7155C13.3141 13.3296 13.5543 12.9419 13.7347 12.4853C13.9089 12.0439 14.0284 11.539 14.062 10.7997C14.0962 10.0587 14.1041 9.82252 14.1041 7.93663C14.1041 6.05074 14.0962 5.81402 14.062 5.07358C14.0278 4.33424 13.9089 3.82913 13.7347 3.38797C13.5543 2.93135 13.3135 2.5443 12.9219 2.1578C12.5304 1.7713 12.137 1.53408 11.6743 1.3568C11.2258 1.18513 10.7135 1.06735 9.96388 1.03424C9.21256 1.00058 8.97236 0.992188 7.05876 0.992188C5.14516 0.992188 4.90479 1.00002 4.15307 1.03424Z" fill="currentColor" />
+                            </svg>
+                          </a>
+                          <a href="#" class="group w-9 h-9 rounded-full border border-gray-300 flex justify-center items-center transition-all duration-500  hover:border-indigo-600">
+                            <svg class="w-[1rem] h-[1rem] text-gray-700 transition-all duration-500  group-hover:text-indigo-600" viewBox="0 0 13 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path d="M2.8794 11.5527V3.86835H0.318893V11.5527H2.87967H2.8794ZM1.59968 2.81936C2.4924 2.81936 3.04817 2.2293 3.04817 1.49188C3.03146 0.737661 2.4924 0.164062 1.61666 0.164062C0.74032 0.164062 0.167969 0.737661 0.167969 1.49181C0.167969 2.22923 0.723543 2.8193 1.5829 2.8193H1.59948L1.59968 2.81936ZM4.29668 11.5527H6.85698V7.26187C6.85698 7.03251 6.87369 6.80255 6.94134 6.63873C7.12635 6.17968 7.54764 5.70449 8.25514 5.70449C9.18141 5.70449 9.55217 6.4091 9.55217 7.44222V11.5527H12.1124V7.14672C12.1124 4.78652 10.8494 3.68819 9.16483 3.68819C7.78372 3.68819 7.17715 4.45822 6.84014 4.98267H6.85718V3.86862H4.29681C4.33023 4.5895 4.29661 11.553 4.29661 11.553L4.29668 11.5527Z" fill="currentColor" />
+                            </svg>
+                          </a>
+                          <a href="#" class="group w-9 h-9 rounded-full border border-gray-300 flex justify-center items-center transition-all duration-500  hover:border-indigo-600">
+                            <svg class="w-[1.25rem] h-[0.875rem] text-gray-700 transition-all duration-500  group-hover:text-indigo-600" viewBox="0 0 16 12" fill="none" xmlns="http://www.w3.org/2000/svg">
+                              <path fill-rule="evenodd" clip-rule="evenodd" d="M13.9346 1.13529C14.5684 1.30645 15.0665 1.80588 15.2349 2.43896C15.5413 3.58788 15.5413 5.98654 15.5413 5.98654C15.5413 5.98654 15.5413 8.3852 15.2349 9.53412C15.0642 10.1695 14.5661 10.669 13.9346 10.8378C12.7886 11.1449 8.19058 11.1449 8.19058 11.1449C8.19058 11.1449 3.59491 11.1449 2.44657 10.8378C1.81277 10.6666 1.31461 10.1672 1.14622 9.53412C0.839844 8.3852 0.839844 5.98654 0.839844 5.98654C0.839844 5.98654 0.839844 3.58788 1.14622 2.43896C1.31695 1.80353 1.81511 1.30411 2.44657 1.13529C3.59491 0.828125 8.19058 0.828125 8.19058 0.828125C8.19058 0.828125 12.7886 0.828125 13.9346 1.13529ZM10.541 5.98654L6.72178 8.19762V3.77545L10.541 5.98654Z" fill="currentColor" />
+                            </svg>
+                          </a>
+                        </div>
+                      </div>
+                      <!--Grid-->
+                      <div class="py-7 border-t border-gray-200">
+                        <div class="flex items-center justify-center">
+                          <span class="text-gray-400 ">©<a href="#">MEMBAPlus</a> 2024, All rights reserved.</span>
+                        </div>
+                      </div>
+                    </div>
+                  </footer>
+            </footer>
 
         </div>
     </div>

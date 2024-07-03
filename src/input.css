@@ -14,6 +14,7 @@
 /* Base font size */
 html {
     font-size: 16px;
+    scroll-behavior: smooth;
 }
 
 /* Responsive font sizes */
@@ -71,6 +72,22 @@ p, a, li, td, th {
 .gradientzz {
     background-image: linear-gradient(90deg, rgb(20, 56, 211), rgb(16, 32, 159));
     text-align: center;
+}
+
+.leftflex li {
+    margin: 0.5rem 0;
+    font-size: 0.9rem;
+}
+
+.blurbg {
+    background-color: rgba(203, 222, 243, 0.8);
+    backdrop-filter: blur(8px);
+}
+
+hr {
+    border: 0;
+    height: 0.07rem;
+    background-color: rgba(79, 39, 251, 0.3);
 }
 
 /* Media queries for responsiveness */
